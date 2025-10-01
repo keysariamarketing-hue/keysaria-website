@@ -1,0 +1,23 @@
+// Enum types
+export enum ModeOfPayment {
+  COD = "COD",
+  PREPAID = "PREPAID",
+}
+
+export enum OrderStatus {
+  INPROCESS = "INPROCESS",
+  ORDER_CONFIRM = "ORDER_CONFIRM",
+  READY_TO_SHIP = "READY_TO_SHIP",
+  SHIPPED = "SHIPPED",
+  OUT_FOR_DELIVERY = "OUT_FOR_DELIVERY",
+  DELIVERED = "DELIVERED",
+  EXCHANGE_REQUESTED = "EXCHANGE_REQUESTED",
+  EXCHANGED = "EXCHANGED",
+  CANCELLED = "CANCELLED",
+}
+
+export enum PaymentStatus {
+  PENDING = "PENDING",
+  DONE = "DONE",
+  FAILED = "FAILED",
+}

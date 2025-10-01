@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Lato:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Erstoria";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../../public/fonts/Erstoria.woff2") format("woff2"),
+    url("./../../public/fonts/Erstoria.ttf") format("truetype");
+}
+.sty-font {
+  font-family: "Erstoria";
+}
+@font-face {
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../../public/fonts/meta-normal.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../../public/fonts/Oswald-VariableFont_wght.ttf")
+    format("truetype");
+}
+.metafont {
+  font-family: "Meta";
+}
+
+:root {
+  --sixtypx: 60px;
+  --thirtysixpx: 36px;
+  --twentyfourpx: 24px;
+  --twentypx: 20px;
+  --sixteenpx: 16px;
+  --fourteenpx: 14px;
+  --twelvepx: 12px;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-text-family {
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: var(--sixtypx);
+  font-weight: 600;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: var(--thirtysixpx);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--twentyfourpx);
+}
+
+h4 {
+  font-size: var(--twentypx);
+}
+h5 {
+  font-size: var(--sixteenpx);
+}
+
+h6 {
+  font-size: var(--fourteenpx);
+}
+.cta {
+  /* background-color: #9e0000; */
+  background-color: #000000;
+  transition: all 0.4s;
+}
+.cta:hover {
+  background-color: #2a2a2a;
+  transition: all 0.4s;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.background {
+  /* background-color: rgba(255, 136, 0, 0.24); */
+  background-image: linear-gradient(
+    130deg,
+    #b33601 20%,
+    rgb(255, 255, 255) 80%
+  );
+}
+.input-border {
+  border: 1px solid black;
+}
+.banner-card {
+  background: rgba(126, 44, 0, 0.5);
+}
+.background-rectangle {
+  background-color: #b33601;
+}
+.testimonial {
+  /* background-color: rgba(255, 136, 0, 0.24); */
+  background: #f3f2f2;
+}
+
+.text-highlight {
+  color: #fcc90e;
+}
+
+.nav-strip {
+  background-color: #ffffff;
+}
+.footer {
+  background-color: #f8efee;
+  background-repeat: repeat-x;
+  background-size: 1000px;
+  background-position: bottom;
+}
+.sub-footer {
+  background-color: #e7c4be;
+}
+.card-background {
+  background-color: #faf7f3;
+}
+.nav-hover:hover {
+  background-color: #f3f8ff;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.float-label-input:focus-within label,
+.float-label-input input:not(:placeholder-shown) + label {
+  transform: translateY(-1.5rem) scale(0.75);
+  background-color: white;
+}
+
+.loader {
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
+}
+
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;
+  background-color: #fff;
+  box-shadow: 30px 0 0 #ff3d00;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite;
+  background-color: #ff3d00;
+  box-shadow: 30px 0 0 #fff;
+}
+
+.dialog-image {
+  transition: transform 0.3s ease, transform-origin 0.1s ease;
+}
+
+.zoomable-image {
+  transition: transform 0.3s ease;
+  user-select: none; /* Prevent text selection while dragging */
+}
+
+.zoomable-image.zoomed {
+  cursor: grab;
+}
+
+.zoomable-image.zoomed:active {
+  cursor: grabbing;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #ff3d00;
+  }
+  50% {
+    box-shadow: 0 0 0 #ff3d00;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
